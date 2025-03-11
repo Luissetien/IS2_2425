@@ -1,3 +1,4 @@
+package es.unican.is2.GUI;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -12,6 +13,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.JList;
 
 import javax.swing.border.LineBorder;
+
+import es.unican.is2.Common.Contribuyente;
+import es.unican.is2.Common.DataAccessException;
+import es.unican.is2.Common.IInfoImpuestoCirculacion;
+import es.unican.is2.Common.Vehiculo;
 
 import java.awt.Color;
 import javax.swing.JButton;

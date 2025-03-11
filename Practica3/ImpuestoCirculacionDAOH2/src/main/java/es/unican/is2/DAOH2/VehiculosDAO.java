@@ -1,9 +1,16 @@
+package es.unican.is2.DAOH2;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
+
+import es.unican.is2.Common.DataAccessException;
+import es.unican.is2.Common.IVehiculosDAO;
+import es.unican.is2.Common.Motocicleta;
+import es.unican.is2.Common.Turismo;
+import es.unican.is2.Common.Vehiculo;
 
 /**
  * Clase que implementa la capa DAO de acceso a vehiculos.

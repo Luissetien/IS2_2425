@@ -1,3 +1,4 @@
+package es.unican.is2.Common;
 /**
  * Interfaz de negocio para gestionar contribuyentes
  */
