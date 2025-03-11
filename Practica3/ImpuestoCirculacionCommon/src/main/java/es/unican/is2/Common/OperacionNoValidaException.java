@@ -1,4 +1,4 @@
-
+package es.unican.is2.Common;
 
 @SuppressWarnings("serial")
 public class OperacionNoValidaException extends RuntimeException {

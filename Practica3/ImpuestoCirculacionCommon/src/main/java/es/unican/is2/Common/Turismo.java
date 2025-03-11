@@ -1,4 +1,6 @@
+package es.unican.is2.Common;
 import java.time.LocalDate;
+import java.time.Year;
 
 /**
  * Clase que representa un vehiculo de tipo turismo.
@@ -9,7 +11,9 @@ public class Turismo extends Vehiculo {
 	
 	public Turismo(long id, String matricula, LocalDate fechaMatriculacion, TipoMotor motor, double potencia) {
 		super(id, matricula, fechaMatriculacion, motor);
-		//TODO
+		
+		this.potencia = potencia;
+		
 	}
 
 	/**
@@ -21,8 +25,38 @@ public class Turismo extends Vehiculo {
 
 	@Override
 	public double precioImpuesto() {
-		//TODO
-		return 0;
+
+	    double descuentoAplicado = calcularDescuento();
+	    
+	    double precioFinal = 0;
+
+	    if (potencia < 10) {
+	    	
+	        precioFinal = 30;
+	    }
+	    
+	    else if (potencia >= 10 && potencia < 15) {
+	    	
+	        precioFinal = 72;
+	    }
+	    
+	    else if (potencia >= 15 && potencia < 18) {
+	    	
+	        precioFinal = 150;
+	    }
+	    
+	    else if (potencia >= 18 && potencia < 25) {
+	    	
+	        precioFinal = 190;
+	    }
+	    
+	    else if (potencia >= 25) {
+	    	
+	        precioFinal = 250;
+	    }
+
+	    return descuentoAplicado * precioFinal;
 	}
+
 
 }

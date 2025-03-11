@@ -1,9 +1,14 @@
+package es.unican.is2.DAOH2;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
+
+import es.unican.is2.Common.Contribuyente;
+import es.unican.is2.Common.DataAccessException;
+import es.unican.is2.Common.IContribuyentesDAO;
 
 /**
  * Clase que implementa la capa DAO de acceso a contribuyentes.

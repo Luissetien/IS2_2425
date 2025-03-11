@@ -1,6 +1,13 @@
+package es.unican.is2.DAOH2;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+
+import es.unican.is2.Common.DataAccessException;
+import es.unican.is2.Common.Motocicleta;
+import es.unican.is2.Common.TipoMotor;
+import es.unican.is2.Common.Turismo;
+import es.unican.is2.Common.Vehiculo;
 
 /**
  * Clase de utilidad que mapea filas de la base de datos a 

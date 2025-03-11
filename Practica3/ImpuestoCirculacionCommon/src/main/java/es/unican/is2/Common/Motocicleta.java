@@ -1,4 +1,4 @@
-
+package es.unican.is2.Common;
 
 import java.time.LocalDate;
 
@@ -11,7 +11,8 @@ public class Motocicleta extends Vehiculo {
 
 	public Motocicleta(long id, String matricula, LocalDate fechaMatriculacion, TipoMotor motor, int cilindrada) {
 		super(id, matricula, fechaMatriculacion, motor);
-		//TODO
+		
+		this.cilindrada = cilindrada;
 	}
 
 	/**
@@ -23,8 +24,37 @@ public class Motocicleta extends Vehiculo {
 
 	@Override
 	public double precioImpuesto() {
-		//TODO
-		return 0;
+		
+		double precioFinal = 0;
+		
+	    double descuentoAplicado = calcularDescuento();
+	    
+	    if (cilindrada < 100) {
+	    	
+	        precioFinal = 10;
+	    }
+	    
+	    else if (cilindrada >= 100 && cilindrada < 200) {
+	    	
+	        precioFinal = 18;
+	    }
+	    
+	    else if (cilindrada >= 200 && cilindrada < 400) {
+	    	
+	        precioFinal = 35;
+	    }
+	    
+	    else if (cilindrada >= 400 && cilindrada < 900) {
+	    	
+	        precioFinal = 75;
+	    }
+	    
+	    else if (cilindrada >= 900) {
+	    	
+	        precioFinal = 150;
+	    }
+
+	    return descuentoAplicado * precioFinal;
 	}
 
 }
